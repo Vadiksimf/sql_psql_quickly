@@ -1,7 +1,7 @@
 # sql_psql_quickly
 Things to write SQL with Postgres
 
-`sh
+```sh
 # Go to CLI
 psql postgres
 
@@ -36,4 +36,4 @@ WHERE
 # UPDATE and DELETE data
 UPDATE cities SET population = 39505000 WHERE name = 'Tokyo';
 UPDATE cities SET population = 555000 WHERE name = 'Shanghai' AND country = 'US';
-`
+```
