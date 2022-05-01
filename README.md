@@ -1,6 +1,16 @@
 # sql_psql_quickly
 Things to write SQL with Postgres
 
+*Create DB
+createdb db_name
+sudo -u postgres createdb db_name
+
+To login without a password:
+sudo -u user_name psql db_name
+
+To reset the password if you have forgotten:
+ALTER USER user_name WITH PASSWORD 'new_password';
+
 ```sh
 # Go to CLI
 psql postgres
