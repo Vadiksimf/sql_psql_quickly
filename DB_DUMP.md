@@ -33,3 +33,10 @@ sudo pg_dump -U villages-dev -W villages > dumper.sql</br>
 ## Create database from dump
 psql -U postgres [databasename] < dumper.sql</br>
 psql -h villages.rds.amazonaws.com -U villages -W villages_db < dumper.sql</br>
+
+## Create MySQL dump
+### Remote
+mysqldump -h rds.host.name -u remote_user_name -p remote_db > dump.sql
+### Local
+mysql -u local_user_name -p local_db < dump.sql
+
