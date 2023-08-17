@@ -19,10 +19,18 @@ psql postgres
 
 ```sql
 # Create table
-CREATE TABLE cities ( name VARCHAR(50), country VARCHAR(50), population INTEGER, area INTEGER );
+CREATE TABLE cities (
+  name VARCHAR(50),
+  country VARCHAR(50),
+  population INTEGER,
+  area INTEGER
+);
 
 # INSERT data
-INSERT INTO cities ( name, country, population, area ) VALUES ( 'Tokyo', 'Japan', 38505000, 8223), ( 'Shanghai', 'China', 22125000, 5423);
+INSERT INTO cities (name, country, population, area )
+VALUES
+  ('Tokyo', 'Japan', 38505000, 8223),
+  ('Shanghai', 'China', 22125000, 5423);
 
 # SELECT data
 SELECT * FROM cities LIMIT 10;
@@ -33,8 +41,8 @@ SELECT name, price FROM phones WHERE units_sold > 5000;
 SELECT name, manufacturer FROM phones WHERE name = 'Apple';
 
 SELECT name, manufacturer FROM phones WHERE name IN ('Apple', 'Nokia');
-SELECT * FROM cities WHERE NOT IN (822, 8230) AND name = 'Tokyo'
-;SELECT name, manufacturer FROM phones WHERE name = 'Apple' OR name = 'Nokia';
+SELECT * FROM cities WHERE NOT IN (822, 8230) AND name = 'Tokyo';
+SELECT name, manufacturer FROM phones WHERE name = 'Apple' OR name = 'Nokia';
 
 SELECT 
   name, 
@@ -54,14 +62,17 @@ DELETE FROM cities WHERE "name" = 'Tokyo';
 DROP TABLE photos;
 
 # Primary key / Foreign key
-CREATE TABLE users
-  (id SERIAL PRIMARY KEY,
-  name VARCHAR(50));
+CREATE TABLE users (
+  # id SERIAL PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(50)
+);
 
-CREATE TABLE photos
-  (id SERIAL PRIMARY KEY,
+CREATE TABLE photos (
+  id SERIAL PRIMARY KEY,
   url VARCHAR (255),
-  user_id INTEGER REFERENCES users(id) ON DELETE SET NULL);
+  user_id INTEGER REFERENCES users(id) ON DELETE SET NULL
+);
 
 # ON DELETE NO ACTION --> ERROR
 # ON DELETE RESTRICT  --> ERROR
