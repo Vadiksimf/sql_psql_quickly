@@ -1,7 +1,7 @@
 # postgres
 
 ## Connect to database
-psql -h eu-north-1.rds.amazonaws.com -U postgres -W postgres </br>
+`psql -h eu-north-1.rds.amazonaws.com -U postgres -W postgres`
 
 ## Create database
 Change the user to postgres:</br>
