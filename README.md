@@ -93,3 +93,25 @@ full join commentaries c on u.id = c.user_id
 full join photos p on u.id = p.user_id and u.id = c.user_id;
 
 ```
+
+## GROUPPING AND AGREGATES
+```sql
+select MAX(id)
+from commentaries;
+
+select MIN(id)
+from users;
+
+select COUNT(id)
+from users;
+
+select AVG(id)
+from users;
+
+select SUM(id)
+from users;
+
+select user_id, COUNT(id) as num_of_comments 
+from commentaries
+group by user_id;
+```
