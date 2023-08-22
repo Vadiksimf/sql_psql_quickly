@@ -22,8 +22,8 @@ from commentaries
 group by user_id;
 ```
 
-## MORE COMPLEX aggregates
-### FILTER AND COUNT
+## Comples aggregates
+### Filter by HAVING word
 ```sql
 select status , COUNT(*)
 from matches m 
