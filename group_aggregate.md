@@ -22,9 +22,9 @@ from commentaries
 group by user_id;
 ```
 
-# MORE COMPLEX aggregates
-## FILTER AND COUNT
-```
+## MORE COMPLEX aggregates
+### FILTER AND COUNT
+```sql
 select status , COUNT(*)
 from matches m 
 group by status;
