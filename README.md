@@ -96,6 +96,7 @@ full join photos p on u.id = p.user_id and u.id = c.user_id;
 
 ## GROUPPING AND AGREGATES
 ```sql
+# Basic aggregates
 select MAX(id)
 from commentaries;
 
@@ -115,7 +116,7 @@ select user_id, COUNT(id) as num_of_comments
 from commentaries
 group by user_id;
 
-# MORE COMPLEX
+# MORE COMPLEX aggregates
 ## FILTER AND COUNT
 select status , COUNT(*)
 from matches m 
@@ -131,4 +132,17 @@ from events e
 join matches m on e."fixtureId" = m."fixtureId" 
 GROUP BY m."fixtureId";
 
+select m."fixtureId", "type", COUNT(*) as goals
+from events e 
+join matches m on e."fixtureId" = m."fixtureId"
+where "type" = 'Goal'
+group by m."fixtureId", "type"
+having COUNT(*) > 4;
+
+-- Find matches where average minute of GOALS was in 1 period
+select "fixtureId", "type", AVG(cast(elapsed as int))
+from events e
+where "type" = 'Goal'
+group by "fixtureId", "type"
+having  AVG(cast(elapsed as int)) < 45;
 ```
