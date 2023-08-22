@@ -86,5 +86,10 @@ SELECT comment, url
 FROM comments
 JOIN photos ON photos.id = comments.photo_id
 
+# MULTIPLE JOINS AND FILTERING
+select url, text, name
+from users u
+full join commentaries c on u.id = c.user_id
+full join photos p on u.id = p.user_id and u.id = c.user_id;
 
 ```
