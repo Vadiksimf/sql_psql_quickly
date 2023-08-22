@@ -2,20 +2,20 @@
 Things to write SQL with Postgres
 
 *Create DB
-createdb db_name
+createdb db_name</br>
 `sudo -u postgres createdb db_name`
 
-To login without a password:
+To login without a password:</br>
 `sudo -u user_name psql db_name`
 
-To reset the password if you have forgotten:
+To reset the password if you have forgotten:</br>
 `ALTER USER user_name WITH PASSWORD 'new_password';`
 
-*Go to CLI
+*Go to CLI</br>
 `psql postgres`
 
-*Show databases
-\dt+;
+*Show databases</br>
+`\dt+;`
 
 ```sql
 # Create table
@@ -114,4 +114,21 @@ from users;
 select user_id, COUNT(id) as num_of_comments 
 from commentaries
 group by user_id;
+
+# MORE COMPLEX
+## FILTER AND COUNT
+select status , COUNT(*)
+from matches m 
+group by status;
+
+select "fixtureId", COUNT (*)
+from events
+where "fixtureId" = 1005897
+group by "fixtureId";
+
+select m."fixtureId", COUNT(*)
+from events e 
+join matches m on e."fixtureId" = m."fixtureId" 
+GROUP BY m."fixtureId";
+
 ```
