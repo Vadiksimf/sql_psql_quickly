@@ -1,7 +1,7 @@
-## GROUPPING AND AGREGATES
+# GROUPPING AND AGREGATES
 
+## Basic aggregates
 ```sql
-# Basic aggregates
 select MAX(id)
 from commentaries;
 
@@ -20,9 +20,11 @@ from users;
 select user_id, COUNT(id) as num_of_comments 
 from commentaries
 group by user_id;
+```
 
 # MORE COMPLEX aggregates
 ## FILTER AND COUNT
+```
 select status , COUNT(*)
 from matches m 
 group by status;
