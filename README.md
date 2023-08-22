@@ -20,8 +20,7 @@
    - [Subqueries](subqueries.md): Learn how to use subqueries to achieve complex data retrieval.
 
 5. **Data Aggregation and Grouping**
-   - [GROUP BY Clause](group_by.md): Understand how to group data for aggregation.
-   - [Aggregation Functions](aggregation_functions.md): Learn common aggregation functions like SUM, AVG, COUNT, etc.
+   - [GROUP BY Clause And Aggregation Functions](group_aggregate.md): How to group data for aggregation. Aggregation functions like SUM, AVG, COUNT, MAX, MIN.
 
 6. **Advanced SQL Concepts**
    - [Indexes and Performance](indexes_and_performance.md): Discover the role of indexes in optimizing query performance.
@@ -42,7 +41,7 @@
 ## Command line
 
 10. **Work with PSQL**
-   - [PSQL basic commands](psql.md): Apply your SQL skills with hands-on projects.
+   - [PSQL basic commands](psql.md): How to work with 'psql' command line
 
 11. **Create database dump**
-   - [SQL Dupm Create/Load](dump.md): Apply your SQL skills with hands-on projects.
+   - [SQL Dupm Create/Load](dump.md): How to creage SQL dumps
