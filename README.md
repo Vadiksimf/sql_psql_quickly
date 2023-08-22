@@ -2,15 +2,13 @@
 
 ## Queries
 
-1. **Introduction to SQL**
-   - [Introduction to SQL](intro_to_sql.md): Get acquainted with SQL and its importance in database management.
+1. **Tables Manipulations**
+   - [Create Update Delete tables](tables.md): How to works with tables in PostgreSQL
 
 2. **Basic SQL Queries**
-   - [SELECT Statement](basic_select.md): Learn how to retrieve data from a database using the SELECT statement.
-   - [Filtering Data](filtering_data.md): Explore techniques for filtering data using WHERE clause.
-   - [Sorting Data](sorting_data.md): Understand how to sort retrieved data using ORDER BY clause.
+   - [SELECT, WHERE, ORDER_BY Statements](basics.md): How to retrieve data from a database using the SELECT, WHERE, ORDER BY statement.
 
-3. **Data Manipulation**
+3. **Data Manipulations**
    - [INSERT Statement](insert_statement.md): Learn how to insert new records into a database.
    - [UPDATE Statement](update_statement.md): Discover how to modify existing records in a database.
    - [DELETE Statement](delete_statement.md): Understand how to remove records from a database.
