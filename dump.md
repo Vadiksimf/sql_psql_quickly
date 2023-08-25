@@ -27,8 +27,8 @@ grant all privileges on database testdb to testuser;
 psql -h eu-north-1.rds.amazonaws.com -U postgres -W postgres > dumper.sql
 
 
-sudo pg_dump --dbname=postgres://villages-dev:"password"@18.194.32.27/villages > dump-village-dev.sql
-sudo pg_dump postgresql://villages-dev:"password"@localhost:5432/villages > dumper.sql
+sudo pg_dump --dbname=postgres://villages-dev:password@hostname/villages > dump-village-dev.sql
+sudo pg_dump postgresql://villages-dev:password@hostname:5432/villages > dumper.sql
 sudo pg_dump -U villages-dev -W villages > dumper.sql
 ```
 
