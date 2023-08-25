@@ -24,18 +24,18 @@ grant all privileges on database testdb to testuser;
 
 ## Create dumb
 ```sh
-psql -h eu-north-1.rds.amazonaws.com -U postgres -W postgres > dumper.sql </br>
+psql -h eu-north-1.rds.amazonaws.com -U postgres -W postgres > dumper.sql
 
 
-sudo pg_dump --dbname=postgres://villages-dev:fusion@18.194.32.27/villages > dump-village-dev.sql</br>
-sudo pg_dump postgresql://villages-dev:"password"@localhost:5432/villages > dumper.sql</br>
-sudo pg_dump -U villages-dev -W villages > dumper.sql</br>
+sudo pg_dump --dbname=postgres://villages-dev:"password"@18.194.32.27/villages > dump-village-dev.sql
+sudo pg_dump postgresql://villages-dev:"password"@localhost:5432/villages > dumper.sql
+sudo pg_dump -U villages-dev -W villages > dumper.sql
 ```
 
 ## Create database from dump
 ```sh
-psql -U postgres [databasename] < dumper.sql</br>
-psql -h villages.rds.amazonaws.com -U villages -W villages_db < dumper.sql</br>
+psql -U postgres [databasename] < dumper.sql
+psql -h villages.rds.amazonaws.com -U villages -W villages_db < dumper.sql
 
 # OR
 sudo -u postgres -i psql villages < dumper.sql
