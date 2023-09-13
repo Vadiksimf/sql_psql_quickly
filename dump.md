@@ -32,10 +32,14 @@ sudo pg_dump postgresql://villages-dev:password@hostname:5432/villages > dumper.
 sudo pg_dump -U villages-dev -W villages > dumper.sql
 ```
 
-## Create database from dump
+## Restore database from dump
 ```sh
+# With psql
 psql -U postgres [databasename] < dumper.sql
 psql -h villages.rds.amazonaws.com -U villages -W villages_db < dumper.sql
+
+# With pg-restore
+pg_restore -h 0.0.0.0 -p 5432 -U staige -W -v --dbname=staige -c staige_api_prod.dump
 
 # OR
 sudo -u postgres -i psql villages < dumper.sql
