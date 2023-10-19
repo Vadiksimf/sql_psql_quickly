@@ -10,7 +10,7 @@ SELECT *
 SELECT id
 ```
 
-### Many one row and one column (SKALAR QUERY)
+### Many one row and one column (SCALAR QUERY)
 ```sql
 SELECT COUNT(*)
 ```
