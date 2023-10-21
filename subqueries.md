@@ -56,5 +56,62 @@ JOIN (
   FROM ordres
   WHERE product_id = 3
 ) as o
-ON o.user_id = users.id
+ON o.user_id = users.id;
 ```
+
+## Examples with subquery in WHERE
+
+Query depends on the comparison operator (IN etc)
+- IN / NOT IN: checks in a list of values
+- >, =, <> ALL/SOME/ANY: returns single columnt
+- SOME = ANY  ~ OR (single variant enouth)
+- ALL         ~ AND (must match to all values)
+```sql
+SELECT id
+FROM orders
+WHERE product_id IN (
+  SELECT id FROM products WHERE price / weight > 5
+);
+```
+
+```sql
+SELECT name, department
+FROM priducts
+WHERE department NOT IN (
+  SELECT department FROM priducts WHERE price < 100
+);
+```
+
+```sql
+SELECT name, department, price
+FROM priducts
+WHERE department > ALL (
+  SELECT price FROM priducts WHERE department = "Industrial"
+);
+```
+
+```sql
+SELECT name, price
+FROM phones
+WHERE price > (
+  SELECT price FROM phones WHERE name = "Samsung S5629 Monte"
+);
+```
+
+Select the name and price of phones which have price greater that price of any Samsung phone
+```sql
+SELECT name, price
+FROM phones
+WHERE price > ALL (SELECT price FROM phones WHERE manufacturer = 'Samsung');
+```
+
+## Corellated subquery 
+
+```sql
+SELECT name, depatment, price
+FROM products AS p1
+WHERE price = (SELECT MAX(price) FROM products AS p2 WHERE p2.department = p1.department);
+```
+
+
+
