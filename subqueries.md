@@ -1,5 +1,6 @@
 ## Examples with subquery in SELECT
-Must be scalar queries
+- Must be scalar queries
+- Works as a loop FOR EACH row(name, price) --> DO SUBQUERY
 ```sql
 SELECT name, price, (
   SELECT price FROM products WHERE id = 3          # <--scalar query
@@ -113,5 +114,20 @@ FROM products AS p1
 WHERE price = (SELECT MAX(price) FROM products AS p2 WHERE p2.department = p1.department);
 ```
 
+Without using a join or a group by, print the number of orders for each product
+```sql
+SELECT name, (
+  SELECT COUNT(*) FROM orders AS o WHERE o.product_id = p.id
+) AS num_orders
+FROM products AS p
+```
 
+## Queries without using FROM clause
 
+Find maximum, minimum and average price
+```sql
+SELECT
+  (SELECT MAX(price) FROM phones) AS max_price,
+  (SELECT MIN(price) FROM phones) AS min_price,
+  (SELECT AVG(price) FROM phones) AS avg_price;
+```
