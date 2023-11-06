@@ -15,3 +15,10 @@ To reset the password if you have forgotten:</br>
 
 *Show databases</br>
 `\dt+;`
+
+### Quit
+```psql
+quit
+
+/q
+```
