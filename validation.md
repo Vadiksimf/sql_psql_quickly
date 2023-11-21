@@ -40,4 +40,25 @@ ALTER TABLE products
 DROP CONSTRAINT products_name_key;
 ```
 
-### custom validation
+### custom validation - CHECK keyword
+```sql
+CREATE TABLE products (
+  is SERIAL PRIMARY KEY,
+  price INTEGER CHECK (price > 0),
+);
+```
+
+```sql
+ALTER TABLE products
+ADD CHECK (price > 0);
+```
+
+```sql
+CREATE TABLE orders (
+  is SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  created_at TIMESTAMP NOT NULL,
+  est_delivery TIMESTAMP NOT NULL,
+  CHECK (created_at < est_delivery);
+```
+
