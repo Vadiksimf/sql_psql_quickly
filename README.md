@@ -36,6 +36,7 @@
 
 9. **Practice Projects** TODO
    - [SQL Practice Projects](practice_projects.md): Apply your SQL skills with hands-on projects.
+   - [Likes](likes.md): How to create like association tables
 
 ## Command line
 
