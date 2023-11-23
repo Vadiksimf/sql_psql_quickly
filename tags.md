@@ -12,7 +12,7 @@
 | 3      | 203     |  15          | 25          |
 
 
-  2. Separate tables (photo_tags, caption_tags)\n
+  2. Separate tables (photo_tags, caption_tags) /n
 Here we have more cases for optimization
 
 | tag_id | post_id |  x_dimension | y_dimension |
