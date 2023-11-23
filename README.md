@@ -9,8 +9,8 @@
    - [Principles](principles.md): Main principles for understanding how postgres works
 
 3. **Data Manipulations**
-   - TODO
-   - [Validation](validation.md): How to add and delete validation in postgres
+   - [Datatypes](datatypes.dm): Most common types used in postgresql
+   - [Validation](validation.md): How to add and delete validation in PostgreSQL
 
 4. **Working with Multiple Tables**
    - [Joins](joins.md): Explore different types of joins to retrieve data from multiple related tables.
