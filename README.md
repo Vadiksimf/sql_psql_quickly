@@ -27,16 +27,17 @@
    - [Other features](other_features.md): DISTINCT and other keywords.
 
 7. **Data Manipulation Language (DML)** TODO
-   - [Transactions](transactions.md): Understand the importance of transactions and how to manage them.
+   - [Transactions](transactions.md): Understand the importance of transactions and how to manage them. **TODO
 
 8. **Data Definition Language (DDL)** TODO
-   - [Creating Tables](creating_tables.md): Learn how to create new tables in a database.
-   - [Altering Tables](altering_tables.md): Understand how to modify existing tables.
-   - [Constraints](constraints.md): Explore various constraints to ensure data integrity.
+   - [Creating Tables](creating_tables.md): Learn how to create new tables in a database. **TODO
+   - [Altering Tables](altering_tables.md): Understand how to modify existing tables. **TODO
+   - [Constraints](constraints.md): Explore various constraints to ensure data integrity. **TODO
 
 9. **Practice Projects** TODO
-   - [SQL Practice Projects](practice_projects.md): Apply your SQL skills with hands-on projects.
+   - [SQL Practice Projects](practice_projects.md): Apply your SQL skills with hands-on projects. **TODO
    - [Likes](likes.md): How to create like association tables
+   - [Tags](tags.md): How to create tags association tables
 
 ## Command line
 
