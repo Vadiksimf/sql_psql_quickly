@@ -1,27 +1,27 @@
 ## Datatypes
 
 ## Numeric types
-### No decimal
-- SMALLING
+#### No decimal
+- SMALLINT
 - INTEGER
 - BIGINT
 
-### No decimal
+#### No decimal
 - SMALLSERIAL
 - SERIAL
 - BIGSERIAL
 
-### Decimal
-#### Floating poins with good precise
+#### Decimal
+##### Floating poins with good precise
 - DECIMAL
 - NUMERIC
 
-#### Floating poins
-- REAL
+##### Floating poins
+- REAL (6 decimal precision)
 - DOUBLE PRECISION
 - FLOAT
 
-### Type convertations
+#### Type convertations
 Behave FLOAT as INTEGER
 SELECT (2.0::INTEGER);
 
