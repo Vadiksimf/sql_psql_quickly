@@ -80,9 +80,10 @@ WHERE name = 'Shanghai' AND country = 'US';
 ### Remove all data
 ```sql
 DELETE FROM cities;
-```
 WHERE "name" = 'Tokyo';
+```
 
 # DELETE TABLE
+```sql
 DROP TABLE photos;
 ```
