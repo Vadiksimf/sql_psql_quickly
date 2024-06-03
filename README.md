@@ -9,7 +9,7 @@
    - [Principles](principles.md): Main principles for understanding how PostgreSQL works
 
 3. **Data Manipulations** 🔄
-   - [Datatypes](datatypes.dm): Most common types used in PostgreSQL
+   - [Datatypes](datatypes.md): Most common types used in PostgreSQL
    - [Validation](validation.md): How to add and delete validation in PostgreSQL
 
 4. **Working with Multiple Tables** 🔄
