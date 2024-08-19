@@ -1,10 +1,15 @@
 # Things to write SQL with Postgres
 
 ## Connect
-```
+```bash
 sudo --login --user=postgres psql
 
 # OR
+sudo -u postgres psql
+```
+
+## Chnage password
+```bash
 sudo -u postgres psql -c "ALTER USER postgres PASSWORD '<new-password>';"
 ```
 
