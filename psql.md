@@ -1,5 +1,18 @@
 # Things to write SQL with Postgres
 
+## Connect
+```
+sudo --login --user=postgres psql
+
+# OR
+sudo -u postgres psql -c "ALTER USER postgres PASSWORD '<new-password>';"
+```
+
+## CONF
+```
+/etc/postgresql/14/main/pg_hba.conf
+```
+
 *Create DB
 createdb db_name</br>
 `sudo -u postgres createdb db_name`
