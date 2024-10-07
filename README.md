@@ -8,6 +8,7 @@
 2. **Basic SQL Queries** 📜
    - [Principles](principles.md): Main principles for understanding how PostgreSQL works
    - [Arithmetic operations](arithmetic_operations.md)
+   - [Unique values](unique_values.md)
 
 3. **Data Manipulations** 🔄
    - [Datatypes](datatypes.md): Most common types used in PostgreSQL
