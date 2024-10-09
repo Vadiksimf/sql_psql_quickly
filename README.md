@@ -27,6 +27,7 @@
    - [Views](views.md): Learn about creating and using views for simplified data access.
    - [Stored Procedures](stored_procedures.md): Explore the creation and usage of stored procedures.
    - [Other features](other_features.md): DISTINCT and other keywords.
+   - [Rregexps](regexp.md): Regular expressions
 
 7. **Data Manipulation Language (DML)** TODO 🔄
    - [Transactions](transactions.md): Understand the importance of transactions and how to manage them. **TODO
